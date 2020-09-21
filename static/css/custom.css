@@ -1,0 +1,238 @@
+.freifunk { color: #dc0067; } 
+
+.rounded-borders {
+	  border: 1px solid  #ffb400;
+	  border-radius: 10px;
+}
+
+hr.freifunklinie {
+  border-top: 2px dotted #009ee0;
+}
+
+
+/* Die folgenden 3 sind für die Icons von FontAwesome */
+.icon-background-default {
+  color: #dc0067;
+}
+
+
+.feature-item .feature-icon {
+  color: #fff;
+}
+
+/*Skalieren des Videos */
+.videocontent {
+	width:90%;
+	max-width: 448px;
+	margin: 0 auto;
+}
+
+.feature-item:hover .icon-background-default {
+  color: #333333;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+
+/* Alles für den Header + Menü  */
+
+/* Bei kleinem Bildschirm (Handy) Menü oben fixed und Hintergrund schwarz */
+@media (max-width:1100px) {
+
+.logo {
+        height : 40px;
+    width : auto;
+}
+  .header {
+    position: fixed;
+    top: 0;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 3;
+  }
+ /* Bonn bei nacht bild ausschalten */
+  #header-background {
+    width: 100%;
+    background:url("");
+    height: 100px;
+  }
+  #header-text {
+     display: none;
+  }
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.header li a {
+  display: block;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  min-height:0;
+  transition: max-height 0.2s ease-out;	
+} 
+
+/* Hamburger menu */
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #FFF;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #FFF;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* animation when clicked */
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 530px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* larger screens (horizontal menu) */
+
+@media (min-width: 1100px) {
+
+
+.logo {
+	height : 70px;
+    width : auto;    
+}
+  .header {
+    position: sticky;
+    top: 0;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 3;
+  }
+  .header li {
+    float: left;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  /* Bonn bei nacht bei Desktop Ansicht */
+  #header-background {
+    width: 100%;
+    height: auto;
+    background:url("https://kbu.freifunk.net/images/headerbonn.jpg");
+  }
+  /* Und die Überschrift */
+  #header-text {
+     display: inline;
+  }
+}
+
+
+/* Objekte von unten nach oben einblenden */
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  }
+  @keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  } 
+
