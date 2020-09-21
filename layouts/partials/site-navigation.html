@@ -1,0 +1,32 @@
+<nav class="header">
+    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white no-underline white-90 dib">
+      {{ with .Site.Params.site_logo }}
+        <img src="{{ . }}" class="logo center w100 mw4-ns" alt="{{ $.Site.Title }}" />
+      {{ else }}
+        {{ .Site.Title }}
+      {{ end }}
+    </a>
+
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      {{ partial "i18nlist.html" . }}
+      {{ if .Site.Menus.main }}
+        <ul class="menu">
+          {{ range .Site.Menus.main }}
+          <li>
+            <a class="f3 fw2 hover-yellow white no-underline" href="{{ .URL }}" title="{{ .Name }}">
+              {{ .Pre}} {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+
+	<li>
+      {{ partialCached "social-follow.html" . }}
+	</li>
+        </ul>
+      {{ end }}
+
+
+  </ul>
+
+</nav>

@@ -1,0 +1,38 @@
+{{ define "header" }}
+   {{/* We can override any block in the baseof file be defining it in the template */}}
+  {{ partial "site-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  {{ $section := .Site.GetPage "section" .Section }}
+
+  <div class="pa3 pa4-ns w-100 w-90-ns center">
+      <section class="w-100 mw9">
+          <div class="relative w-100 mb4 rounded-borders">
+
+
+<article class="bb b--black-10">
+	 <div class="db pv2 ph2  no-underline dark-gray">
+    <div class="flex flex-collum flex-row-ns">
+      <div class="w-100">
+
+
+    <header class="mt4 w-100">
+      {{ partial "social-share.html" . }}
+      <h1 class="f1 athelas mt3 mb1">
+        <center>{{- .Title -}}</center>
+      </h1>
+    </header>
+        {{/* a nice line to separate title and content */}}
+        <hr class="freifunklinie">
+<div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+      {{- .Content -}}
+    </div>
+</div>
+</div>
+</div>
+  </article>
+
+</section>
+</div>
+{{ end }}

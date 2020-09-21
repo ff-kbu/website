@@ -1,0 +1,23 @@
+ <a name="{{ .Params.Anchor }}">
+<article class="bb b--black-10">
+  <div class="db pv2 ph2  no-underline dark-gray">
+    <div class="flex flex-collum flex-row-ns">
+      <div class="w-100">
+        <h1 class="f1 athelas mt3 mb1">
+	  {{/* Generate an anchor with a user defined parameter */}}
+            <a href="{{.Permalink}}" class="color-inherit dim link">
+              <center>{{ .Title }}</center>	
+              </a>
+        </h1>
+	{{/* a nice line to separate title and content */}}
+        <hr class="freifunklinie">
+
+
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+        {{.Content }}
+        </div>
+    </div>
+  </div>
+</div>
+</article>
+ <a name="{{ .Params.Anchor }}">
