@@ -1,5 +1,10 @@
 .freifunk { color: #dc0067; } 
 
+
+.blur {
+	backdrop-filter: blur(2px);
+}
+
 .rounded-borders {
 	  border: 1px solid  #ffb400;
 	  border-radius: 10px;
