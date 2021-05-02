@@ -7,9 +7,11 @@ theme = "ananke"
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "de"
 #SectionPagesMenu = "main"
-Paginate = 40 # this is set low for demonstrating with dummy content. Set to a higher number
+Paginate = 400 # this is set low for demonstrating with dummy content. Set to a higher number
 #googleAnalytics = ""
 enableRobotsTXT = true
+summaryLength=20
+
 
 #[sitemap]
 #  changefreq = "monthly"
@@ -43,6 +45,12 @@ enableRobotsTXT = true
 pre = "<i class='fas fa-question'></i>"
 name = "Was ist Freifunk"
 url ="/wasistfreifunk/"
+weight=1
+
+[[menu.main]]
+pre = "<i class='fas fa-newspaper'></i>"
+name = "Aktuelles"
+url ="/aktuelles/"
 weight=1
 
 [[menu.main]]
