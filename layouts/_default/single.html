@@ -4,6 +4,8 @@
 {{ end }}
 
 {{ define "main" }}
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+
   {{ $section := .Site.GetPage "section" .Section }}
 
   <div class="pa3 pa4-ns w-100 w-90-ns center">
@@ -23,9 +25,17 @@
         <center>{{- .Title -}}</center>
       </h1>
     </header>
+
         {{/* a nice line to separate title and content */}}
         <hr class="freifunklinie">
 <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+         {{ if $featured_image }}
+          {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+          {{ $featured_image := (trim $featured_image "/") | absURL }}
+          <div style="float:right">
+              <img src="{{ $featured_image }}" class="img"> 
+          </div>
+          {{ end }}
       {{- .Content -}}
     </div>
 </div>
