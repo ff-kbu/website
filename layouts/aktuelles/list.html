@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <article >
+ <section class="flex-ns flex-wrap justify-around mt5">
+      {{ range .Paginator.Pages }}
+
+
+<div class="pa3 pa4-ns w-100 w-90-ns center">
+        <div class="relative w-100 mb4 rounded-borders slideInUp"> <!-- class="relative w-100 w-30-l mb4 bg-white"> -->
+          {{ partial "aktuelles-summary.html" . }}
+      </time>
+
+        </div>
+    
+</div>
+  {{ end }}
+
+</section>
+    {{- template "_internal/pagination.html" . -}}
+  </article>
+{{ end }}
